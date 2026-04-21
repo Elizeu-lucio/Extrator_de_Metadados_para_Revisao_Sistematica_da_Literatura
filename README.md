@@ -11,7 +11,7 @@ Este projeto foi desenvolvido para automatizar a coleta de DOIs, Título, Autor,
 ## 🚀 Como Usar
 1. Dentro do Google Acadêmico, salve todos os resultados de pesquisa > vá em Minha Biblioteca e exporte no formato **EndNote**.
 2. Instale as dependências: `pip install -r requirements.txt`.
-3. Ajuste a variável `LIMITE_CONFIANCA`, no código, se necessário.
+3. Ajuste a variável `TAXA_SIMILARIDADE`, no código, se necessário.
 4. Preencha a variável  `ARQUIVO_ENTRADA` com o nome do arquivo fonte (ex: citations.enw).
 4. Execute o script: `extrator_rsl.py`.
 
