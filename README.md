@@ -1,6 +1,6 @@
 # Extrator de Metadados para Revisão Sistemática (ENW para Excel)
 
-Este projeto foi desenvolvido para automatizar a coleta de DOIs e links acadêmicos a partir de arquivos de citação do EndNote (.enw), auxiliando pesquisadores em Revisões Sistemáticas de Literatura (RSL).
+Este projeto foi desenvolvido para automatizar a coleta de DOIs, Título, Autor, Ano de Publicação e link, a partir de arquivos EndNote (.enw), auxiliando pesquisadores em Revisões Sistemáticas de Literatura (RSL).
 
 ## 🛡️ Rigor Científico e Responsabilidade
 **Atenção:** Este script utiliza a API da CrossRef para buscar DOIs baseando-se no título do estudo. Para garantir a integridade dos dados acadêmicos:
