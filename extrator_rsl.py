@@ -2,12 +2,15 @@ import pandas as pd
 from habanero import Crossref
 import time
 from difflib import SequenceMatcher
+import glob
+import os
 
 # ==========================================================
 # CONFIGURAÇÕES DO PESQUISADOR (Editável)
 # ==========================================================
-TAXA_SIMILARIDADE = 0.85  # Ex: 0.85 (85%) | 1.0 (100%)
-ARQUIVO_ENTRADA = 'citations.enw'
+TAXA_SIMILARIDADE = 0.85  #Ex: 0.85 (85%) | 1.0 (100%)
+pasta = "C:/Users/elize/Documents/Repositórios/Extrator_de_Metadados_para_Revisao_Sistematica_da_Literatura"
+ARQUIVO_ENTRADA = glob.glob(os.path.join(pasta ,'*.enw'))
 ARQUIVO_SAIDA = 'resultado_rsl.xlsx'
 # ==========================================================
 
@@ -103,5 +106,15 @@ def executar_pipeline_rsl(arquivo_in, arquivo_out):
     print(f"\nProcessamento concluído. Planilha salva como: {arquivo_out}")
 
 # Rodar o código
+# Rodar o código
 if __name__ == "__main__":
-    executar_pipeline_rsl(ARQUIVO_ENTRADA, ARQUIVO_SAIDA)
+    arquivos_enw = glob.glob('*.enw')
+    
+    if not arquivos_enw:
+        print("Nenhum arquivo .enw encontrado no diretório.")
+    else:
+        for arquivo in arquivos_enw:
+            print(f"\n--- Iniciando processamento do arquivo: {arquivo} ---")
+            # Define um nome de saída baseado no nome do arquivo original
+            nome_saida = arquivo.replace('.enw', '_resultado.xlsx')
+            executar_pipeline_rsl(arquivo, nome_saida)
